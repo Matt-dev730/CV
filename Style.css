@@ -1,0 +1,41 @@
+body
+	{
+		margin: 0;
+	}
+.page
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+.sidebar
+	{
+		background-color: rgba(114,139,253,0.43);
+		flex-basis: 24%;
+		padding: 1%;
+		text-align: center;
+	}
+
+.article
+	{
+		flex-basis: 72%;
+		padding: 1%;
+		text-align: center;
+	}
+
+p
+	{
+		padding-bottom: 50px;
+	}
+
+img	
+	{
+		border-radius: 5px;
+	}
+li
+	{
+		
+		list-style: none;
+		padding-right: 10%;
+	}
