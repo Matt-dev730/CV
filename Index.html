@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+	<html>
+		
+		<head>
+			
+			<meta charset="UTF-8">
+			
+			<link href="Style.css" rel="stylesheet"/>
+			<link href="Js/ChartJs/CSS/Chart.min.css" rel="stylesheet">
+			
+			<title>Mon CV</title>
+		
+		</head>
+		
+		<body>
+			<div class="page">
+				<aside class='sidebar'>
+				
+					<img src='img/photo_cv.jpg' alt='photo' id='photoCv' style='border-radius: 7%;'/>
+					
+					<h3>BRUNEL Mathias</h3><br>
+					<p>Développeur Web alternance<br>
+					<a href='https://www.linkedin.com/in/mathias-brunel-543b111a2/'><img src='img/Linkedin.png' width='35px;' height='35px;' alt='linkedin' id="link"/></a></p>
+
+					<p>N° Téléphone: 07.82.83.96.64<br>
+					Mail: mathias.brunel@hotmail.fr</p>
+
+					<p>Logiciels:<br>
+					<ul>
+
+						<li>Eclipse Néon</li>
+						<li>Visual StudioCode</li>
+						<li>PhPMyAdmin</li>
+						<li>Word</li>
+						<li>Excel</li>
+						<li>PowerPoint</li>
+
+					</ul></p>
+
+					<p>Langues:<br>
+						<ul>
+
+							<li>Anglais: Bon</li>
+							<li>Japonais: Débutant</li>
+
+						</ul></p>
+					
+				
+				</aside>
+				
+				<div class='article'>
+
+					<canvas id="radar" width="770" height="385" style="display: block; width: 770; height: 385;"></canvas><br>
+					<p>Diplôme:<br></p>
+					<p>2019 - 2020: Titre Professionel Developpeur Web et Web Mobil AFPA Istres 13800<br></p>
+					<p>Mes créations:<br></p>
+					<div class='créations'>
+						<div><a href='https://projetalichat.herokuapp.com'><img src="img/Alichat.jpg" alt="alichat"></a>
+							 <a href='https://snake-app1.herokuapp.com'><img src="img/Snake-app.png" alt="snake"></a></div>
+					</div>
+					
+					<p>Mes Loisirs:<br></p>
+					<img src='img/LogoC.png' alt='cuisine' width='70px' height='70px'>
+					<img src='img/LogoJv.png' alt='jeuxvideo' width='70px' height='70px'>
+					<img src='img/LogoV.png' alt='voyages' width='70px' height='70px'>
+					<img src='img/LogoB.png' alt='basketball' width='70px' height='70px'>
+					<img src='img/LogoL.png' alt='lecture' width='70px' height='70px'>
+
+				</div>
+
+			</div>
+
+			<script src='Js/ChartJs/JS/Chart.min.js'></script>
+
+			<script>
+
+				var ctx = document.getElementById('radar').getContext('2d');
+				var data = {
+						labels: ["HTML", "CSS", "JavaEE", "Java", "JavaScript", "PhP", "SQL"],
+						datasets: [
+							{
+							label: "Compétences:",
+							backgroundColor: 'rgba(114,139,253,0.43)',
+							borderColor: 'black',
+							data: [3, 3.5, 2, 2.5, 2, 1, 2.5],
+							}]
+					}
+
+				var options = {
+						scale: {
+							angleLines: {
+								display: false
+							},
+						ticks: {
+							suggestedMin: 0,
+							suggestedMax: 5
+							}
+						}
+				}
+				var config = {
+						type: 'radar',
+						data: data,
+						options: options,
+				}
+				var radar = new Chart(ctx, config);
+			
+			</script>
+
+			<script src='Js/carousel.js' async></script>
+
+		</body>
+			
+	</html>
